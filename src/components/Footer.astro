@@ -1,0 +1,43 @@
+---
+import { siteConfig } from '../config';
+---
+
+<footer class="bg-neutral-50 border-t border-neutral-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Footer Content -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+      <!-- Company Info -->
+      <div>
+        <h3 class="font-semibold text-neutral-900 mb-4">{siteConfig.name}</h3>
+        <p class="text-sm text-neutral-600 mb-4">
+          {siteConfig.description}
+        </p>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="font-semibold text-neutral-900 mb-4">Contact</h3>
+        <div class="space-y-2 text-sm text-neutral-600">
+          <p>
+            <a href={`mailto:${siteConfig.email}`} class="hover:text-neutral-900">
+              {siteConfig.email}
+            </a>
+          </p>
+          <p>
+            <a href={`tel:${siteConfig.phone}`} class="hover:text-neutral-900">
+              {siteConfig.phone}
+            </a>
+          </p>
+          <p>{siteConfig.address}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-neutral-200 pt-8">
+      <p class="text-sm text-neutral-600 text-center">
+        &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
